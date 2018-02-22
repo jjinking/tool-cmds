@@ -65,15 +65,12 @@ Get list of nodes in cluster
 kubectl get nodes
 ```
 
-Connect to minikube terminal
-
-```
-minikube ssh
-```
-
 See docker containers running inside minikube
 
 ```
+# Connect to minikube terminal
+minikube ssh
+
 docker ps
 exit
 ```
