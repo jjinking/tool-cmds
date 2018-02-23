@@ -9,7 +9,7 @@ docker pull centos
 docker images
 
 # Run a docker image
-docker run <REPOSITORY>
+docker run <IMAGE ID>
 
 # Show containers currently running
 docker ps
