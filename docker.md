@@ -33,7 +33,7 @@ docker rm <CONTAINER ID>
 docker rm $(docker ps -a -q)
 
 # Remove docker image from system
-docker rmi centos
+docker rmi <IMAGE ID>
 
 # Build a docker image with Dockerfile in current directory
 docker build -t foo/bar:0.0.1 .
