@@ -10,6 +10,7 @@ docker images
 
 # Run a docker image
 docker run <IMAGE ID>
+docker run -d -p 5000:5000 <IMAGE ID>
 
 # Show containers currently running
 docker ps
