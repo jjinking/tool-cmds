@@ -1,4 +1,4 @@
-Docker commands
+# Docker commands
 
 ```bash
 
@@ -37,6 +37,13 @@ docker rmi centos
 
 # Build a docker image with Dockerfile in current directory
 docker build -t foo/bar:0.0.1 .
-
-
 ```
+
+## Create private registry https://docs.docker.com/registry/deploying/
+
+# Start a registry container
+
+```bash
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+```
+
