@@ -39,7 +39,8 @@ docker rmi centos
 docker build -t foo/bar:0.0.1 .
 ```
 
-## Create private registry https://docs.docker.com/registry/deploying/
+## Create private registry
+https://docs.docker.com/registry/deploying/
 
 # Start a registry container
 
