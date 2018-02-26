@@ -130,6 +130,9 @@ kubectl run ghost --image=ghost
 # Verbose mode to see web service endpoint url
 kubectl -v=9 get pods
 
+# Describe pod
+kubectl describe pod <NAME>
+
 # Delete a deployment
 kubectl delete deployment ghost
 ```
