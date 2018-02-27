@@ -133,6 +133,9 @@ kubectl -v=9 get pods
 # Describe pod
 kubectl describe pod <NAME>
 
+# Get config yaml
+kubectl get deployment/hello-flask -o yaml
+
 # Delete a deployment
 kubectl delete deployment ghost
 ```
