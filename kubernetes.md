@@ -140,6 +140,11 @@ kubectl describe pod <NAME>
 kubectl logs <POD NAME>
 kubectl logs hello-flask-6c6476f894-skdlf
 
+# Curl to running service
+kubectl port-forward hello-flask-6c6476f894-n9ptc 5000 &
+curl localhost:5000
+http localhost:5000
+
 # Get config yaml
 kubectl get deployment/hello-flask -o yaml
 
