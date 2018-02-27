@@ -127,11 +127,18 @@ kubectl get deployments
 # Create a deployment using image from docker hub
 kubectl run ghost --image=ghost
 
+# Deploy a container with docker image on local
+kubectl run hello-flask --image=hello_flask:0.0.0 --image-pull-policy=Never
+
 # Verbose mode to see web service endpoint url
 kubectl -v=9 get pods
 
 # Describe pod
 kubectl describe pod <NAME>
+
+# Get error logs
+kubectl logs <POD NAME>
+kubectl logs hello-flask-6c6476f894-skdlf
 
 # Get config yaml
 kubectl get deployment/hello-flask -o yaml
