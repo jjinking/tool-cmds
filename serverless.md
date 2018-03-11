@@ -27,5 +27,13 @@ sls create -t aws-nodejs -n simple
 
 sls deploy --function <function_name>
 sls deploy -f hello
-
 ```
+
+# Invoke function
+
+```bash
+
+sls invoke -f <function_name>
+
+# Call locally
+sls invoke local -f <function_name>
