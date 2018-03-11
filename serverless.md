@@ -39,7 +39,7 @@ sls invoke local -f <function_name>
 # Call deployed
 sls invoke -f <function_name>
 
-# Check log output
+# Check log output for deployed function
 sls logs -f <function_name>
 
 ```
