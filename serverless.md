@@ -33,7 +33,13 @@ sls deploy -f hello
 
 ```bash
 
-sls invoke -f <function_name>
-
 # Call locally
 sls invoke local -f <function_name>
+
+# Call deployed
+sls invoke -f <function_name>
+
+# Check log output
+sls logs -f <function_name>
+
+```
