@@ -4,7 +4,7 @@ Remote dictionary server
 
 Default port: 6379
 
-Config file: 
+Key value store only - no secondary index
 
 # Install
 
