@@ -30,9 +30,15 @@ redis-cli
 redis-cli -h <host> -p <port>
 
 # Check connection
-ping # returns PONG
+> ping # returns PONG
+
+# Authenticate
+> auth <password>
 
 # Quit CLI
-quit
+> quit
 
+# Commands
+
+https://redis.io/commands
 ```
