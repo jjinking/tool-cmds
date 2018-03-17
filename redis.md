@@ -92,6 +92,9 @@ redis-cli -h <host> -p <port>
 
 # Slicing
 > lrange <key> <idx> <pos>
+
+# Get length
+> llen <key>
 ```
 
 # More Commands
