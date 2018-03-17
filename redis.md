@@ -49,10 +49,15 @@ redis-cli -h <host> -p <port>
 # Remove all (key, value) pairs in current keyspace
 > flushdb
 
+# Set key to expire
+> expire <key> <seconds>
+# Check remaining time to live for a key
+> ttl <key>
+
 # Quit CLI
 > quit
 ```
 
-# Commands
+# More Commands
 
 https://redis.io/commands
