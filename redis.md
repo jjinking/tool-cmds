@@ -43,10 +43,10 @@ redis-cli -h <host> -p <port>
 # Use same key to access different values in different key spaces
 > select <key-space>
 
-# List all keys in keyspace
+# List all keys in current keyspace
 > keys *
 
-# Remove all values in db
+# Remove all (key, value) pairs in current keyspace
 > flushdb
 
 # Quit CLI
