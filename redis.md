@@ -35,10 +35,14 @@ redis-cli -h <host> -p <port>
 # Authenticate
 > auth <password>
 
+# Store and retrive values
+> set <key> <value>
+> get <key>
+
 # Quit CLI
 > quit
+```
 
 # Commands
 
 https://redis.io/commands
-```
