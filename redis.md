@@ -90,6 +90,9 @@ redis-cli -h <host> -p <port>
 > lpop <key>
 > rpop <key>
 
+# Trim
+> ltrim <key> <idx> <pos>
+
 # Slicing
 > lrange <key> <idx> <pos>
 
