@@ -58,6 +58,24 @@ redis-cli -h <host> -p <port>
 > quit
 ```
 
+# Data Structures
+
+```bash
+
+# Nested hash
+> hset <key0> <key1> <value>
+> hget <key0> <key1>
+
+# Set mulitple values
+> hmset <key0> <key1> <value1> <key2> <value2>
+
+# Get multiple values
+> hmget <key0> <key1> <key2>
+
+# Get all nested keys and values
+> hgetall <key0>
+```
+
 # More Commands
 
 https://redis.io/commands
