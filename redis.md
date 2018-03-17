@@ -60,6 +60,8 @@ redis-cli -h <host> -p <port>
 
 # Data Structures
 
+## Nested Dict
+
 ```bash
 
 # Nested hash
@@ -74,6 +76,22 @@ redis-cli -h <host> -p <port>
 
 # Get all nested keys and values
 > hgetall <key0>
+```
+
+## Linked List
+
+```bash
+
+# Insert at left
+> lpush <key> <value>
+> rpush <key> <value>
+
+# Pop
+> lpop <key>
+> rpop <key>
+
+# Slicing
+> lrange <key> <idx> <pos>
 ```
 
 # More Commands
