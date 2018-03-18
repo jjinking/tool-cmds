@@ -58,4 +58,5 @@ Store JSON Schema in schema registry
 ## Partitioning
 
 Producers can use the hash of the key to write to a particular partition
+
 If no key provided, uses round-robin
