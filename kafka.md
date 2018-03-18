@@ -79,6 +79,7 @@ If no key provided, uses round-robin
 - Consumer groups can poll different partitions of same topic and work together to process unique messages
   - Num consumers in a group is upper-bounded by num partitions (no adv to have more consumers than partitions)
 - Consumers keep track of what messages it has read from a specific partition by a numeric value called Offset
+- Each consumer must run on separate thread
 - Re-list all subscriptions whenever `subscribe()` is called - not additive
 - Multiple consumer groups must deal with order guarantee
 
@@ -89,3 +90,17 @@ Consumer assignment to partition changes when the number of consumers changes (a
 First consumer acts as leader
 - talks to zookeeper
 - assigns partitions to new consumers
+
+## Poll loop
+
+- Partition assignment
+- Message fetching
+- Rebalancing - changing assignments
+
+## Commits
+
+- Kafka keeps track of offsets of consumers also
+- Discrepancies between offset in consumer and Kafka can result in data loss or data duplication in a rebalancing event
+- Manually call `commitSync()` to sync up commits after finishing processing data in consumer
+
+
