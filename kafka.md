@@ -4,12 +4,18 @@ Kafka is a distributed streaming platform, not a message queue
 
 Brokers are Kafka servers that producers write to, and consumers read from
 
-Replication vs Partitions
-
 Kafka depends on Zookeeper to serve metadata (i.e. service discovery) to producers and consumers
 
 Topics are a category of messages
 
+# Replication & Partitions
+
+Replications are mirrors to increase throughput (multiple read nodes) and fault tolerance
+- When a leader goes down, a mirror will become a leader
+
+Partitions are also used to increase throughput. Multiple consumers in the same consumer group can read from multiple partitions of the same topic.
+
+Mirrors don't necessarily have to have the same number of partitions as the leader
 
 # Producers
 
