@@ -79,6 +79,7 @@ If no key provided, uses round-robin
 - Consumer groups can poll different partitions of same topic and work together to process unique messages
   - Num consumers in a group is upper-bounded by num partitions (no adv to have more consumers than partitions)
 - Consumers keep track of what messages it has read from a specific partition by a numeric value called Offset
+- Re-list all subscriptions whenever `subscribe()` is called - not additive
 - Multiple consumer groups must deal with order guarantee
 
 ## Partition Rebalance
