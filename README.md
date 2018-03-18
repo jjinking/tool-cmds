@@ -1,2 +1,2 @@
-# tool-cmds
-Commands for tools
+# tools-notes
+Notes on softare tools
