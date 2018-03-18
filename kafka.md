@@ -101,6 +101,9 @@ First consumer acts as leader
 
 - Kafka keeps track of offsets of consumers also
 - Discrepancies between offset in consumer and Kafka can result in data loss or data duplication in a rebalancing event
-- Manually call `commitSync()` to sync up commits after finishing processing data in consumer
+- Manually call method to sync up commits after finishing processing data in consumer
+  - `commitSync()` - blocking, which may cause latency
+  - `commitAsync()` - non-blocking, but does not gaurantee exact sync
+
 
 
