@@ -1,6 +1,10 @@
 # General
 
+Brokers are Kafka servers that producers write to, and consumers read from
+
 Num consumers in a group is upper-bounded by num partitions
+
+Consumers keep track of what messages it has read by a numeric value called Offset
 
 # Producer
 
@@ -51,3 +55,7 @@ Store JSON Schema in schema registry
 - checked by Producer and Consumer to serialize data
 - Added to properties during Producer/Consumer object initialization
 
+## Partitioning
+
+Producers can use the hash of the key to write to a particular partition
+If no key provided, uses round-robin
