@@ -73,6 +73,17 @@ If no key provided, uses round-robin
 
 - Poll partitions for data
 - Consumer groups can poll different partitions of same topic and work together to process unique messages
-  - Num consumers in a group is upper-bounded by num partitions
+  - Num consumers in a group is upper-bounded by num partitions (no adv to have more consumers than partitions)
 - Consumers keep track of what messages it has read from a specific partition by a numeric value called Offset
+- Multiple consumer groups must deal with order guarantee
+
+## Partition Rebalance
+
+Consumer assignment to partition changes when the number of consumers changes (add or remove)
+ 
+
+- First consumer acts as leader
+  - talks to zookeeper
+  - assigns partitions to new consumers
+- 
 
