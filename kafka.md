@@ -1,12 +1,19 @@
 # General
 
+Kafka is a distributed streaming platform, not a message queue
+
 Brokers are Kafka servers that producers write to, and consumers read from
 
-Num consumers in a group is upper-bounded by num partitions
+Replication vs Partitions
 
-Consumers keep track of what messages it has read by a numeric value called Offset
+Kafka depends on Zookeeper to serve metadata (i.e. service discovery) to producers and consumers
 
-# Producer
+Topics are a category of messages
+
+
+# Producers
+
+Write data to a specific topic
 
 ## Batching
 
@@ -60,3 +67,12 @@ Store JSON Schema in schema registry
 Producers can use the hash of the key to write to a particular partition
 
 If no key provided, uses round-robin
+
+
+# Consumers
+
+- Poll partitions for data
+- Consumer groups can poll different partitions of same topic and work together to process unique messages
+  - Num consumers in a group is upper-bounded by num partitions
+- Consumers keep track of what messages it has read from a specific partition by a numeric value called Offset
+
