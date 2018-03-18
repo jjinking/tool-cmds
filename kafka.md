@@ -72,6 +72,10 @@ If no key provided, uses round-robin
 # Consumers
 
 - Poll partitions for data
+
+## Consumer groups
+
+- Consumer group is set in Properties object during instantiation of consumer
 - Consumer groups can poll different partitions of same topic and work together to process unique messages
   - Num consumers in a group is upper-bounded by num partitions (no adv to have more consumers than partitions)
 - Consumers keep track of what messages it has read from a specific partition by a numeric value called Offset
@@ -81,9 +85,6 @@ If no key provided, uses round-robin
 
 Consumer assignment to partition changes when the number of consumers changes (add or remove)
  
-
-- First consumer acts as leader
-  - talks to zookeeper
-  - assigns partitions to new consumers
-- 
-
+First consumer acts as leader
+- talks to zookeeper
+- assigns partitions to new consumers
