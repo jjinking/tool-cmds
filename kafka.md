@@ -42,7 +42,7 @@ More batching results in higher throughput because better data compression, but 
 - Async send
   - callback
   
-## Serilization
+## Serialization
 
 - Avro
   - Hadoop project
