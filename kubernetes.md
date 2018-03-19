@@ -47,10 +47,13 @@ Use minikube
 
 Start a VM in virtualbox called minikube, and run a process called localkube, which runs API server, Scheduler, Controller manager. Also runs docker in that vm
 
-```
+```bash
 minikube start
 minikube status
 minikube stop
+
+# Delete minikube cluster (start fresh)
+minikube delete
 ```
 
 View kube version in client and server
