@@ -126,8 +126,12 @@ Running the command above should show all status Ready
 ```
 # View list of resources
 kubectl get <resource>
+kubectl get <resource> --all-namespaces
 kubectl get pods
-kubectl get deployments
+kubectl get deployments --all-namespaces
+
+# Create a resource from json file
+kubectl create -f ./foo.json
 
 # Create a deployment using image from docker hub
 kubectl run ghost --image=ghost
