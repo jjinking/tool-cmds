@@ -35,6 +35,21 @@ redis-cli -h <host> -p <port>
 # Authenticate
 > auth <password>
 
+# Check number of databases (16 by default)
+> CONFIG GET databases
+1) "databases"
+2) "16"
+
+# Check how many keys are defined for dbs
+> INFO keyspace
+# Keyspace
+db0:keys=10,expires=0
+db1:keys=1,expires=0
+db3:keys=1,expires=0
+
+# Choose a database
+> select 3
+
 # Store and retrive values
 > set <key> <value>
 > get <key>
