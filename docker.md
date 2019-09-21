@@ -38,6 +38,15 @@ docker rmi <IMAGE ID>
 
 # Build a docker image with Dockerfile in current directory
 docker build -t foo/bar:0.0.1 .
+
+# Build using docker-compose
+docker-compose build
+
+# Run container
+docker-compose up -d
+
+# Build and run
+docker-compose up -d --build
 ```
 
 ## Create private registry
